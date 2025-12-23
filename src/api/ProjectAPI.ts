@@ -51,11 +51,8 @@ export async function getProjectById(id: Project["_id"]) {
 
 export async function getFullProject(id: Project["_id"]) {
   try {
-    console.log(id);
     const { data } = await api(`/projects/${id}`);
-    console.log(data);
     const response = projectSchema.safeParse(data);
-    console.log(response);
     if (response.success) {
       return response.data;
     }

@@ -107,7 +107,6 @@ export async function updatePasswordWithToken({
 export async function getUser() {
   try {
     const { data } = await api("/auth/user");
-    console.log(data);
     const response = userSchema.safeParse(data);
 
     if (response.success) {
