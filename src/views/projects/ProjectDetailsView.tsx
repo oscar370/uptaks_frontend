@@ -32,7 +32,7 @@ export default function ProjectDetailsView() {
       <>
         <h1 className="text-5xl font-black"> {data.projectName} </h1>
 
-        <p className="text-2xl font-light text-gray-500 mt-5">
+        <p className="mt-5 text-2xl font-light text-gray-500">
           {data.description}
         </p>
 
@@ -40,14 +40,14 @@ export default function ProjectDetailsView() {
           <nav className="my-5 flex gap-3">
             <button
               type="button"
-              className="bg-purple-400 hover:bg-purple-500 px-10 py-3 text-white text-xl font-bold cursor-pointer transition-colors"
+              className="cursor-pointer bg-purple-400 px-10 py-3 text-xl font-bold text-white transition-colors hover:bg-purple-500"
               onClick={() => navigate("?newTask=true")}
             >
               Agregar Tarea
             </button>
 
             <Link
-              className="bg-fuchsia-600 hover:bg-fuchsia-700 px-10 py-3 text-white text-xl font-bold cursor-pointer transition-colors"
+              className="cursor-pointer bg-fuchsia-600 px-10 py-3 text-xl font-bold text-white transition-colors hover:bg-fuchsia-700"
               to="team"
             >
               Colaboradores

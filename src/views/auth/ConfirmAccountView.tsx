@@ -32,12 +32,12 @@ export default function ConfirmAccountView() {
   return (
     <>
       <h1 className="text-5xl font-black text-white">Confirma tu Cuenta</h1>
-      <p className="text-2xl font-light text-white mt-5">
+      <p className="mt-5 text-2xl font-light text-white">
         Ingresa el código que recibiste {""}
-        <span className=" text-fuchsia-500 font-bold"> por e-mail</span>
+        <span className="font-bold text-fuchsia-500"> por e-mail</span>
       </p>
-      <form className="space-y-8 p-10 bg-white mt-10">
-        <label className="font-normal text-2xl text-center block">
+      <form className="mt-10 space-y-8 bg-white p-10">
+        <label className="block text-center text-2xl font-normal">
           Código de 6 dígitos
         </label>
 
@@ -47,12 +47,12 @@ export default function ConfirmAccountView() {
             onChange={handleChange}
             onComplete={handleComplete}
           >
-            <PinInputField className="w-10 h-10 p-3 rounded-lg border-gray-300 border placeholder-white" />
-            <PinInputField className="w-10 h-10 p-3 rounded-lg border-gray-300 border placeholder-white" />
-            <PinInputField className="w-10 h-10 p-3 rounded-lg border-gray-300 border placeholder-white" />
-            <PinInputField className="w-10 h-10 p-3 rounded-lg border-gray-300 border placeholder-white" />
-            <PinInputField className="w-10 h-10 p-3 rounded-lg border-gray-300 border placeholder-white" />
-            <PinInputField className="w-10 h-10 p-3 rounded-lg border-gray-300 border placeholder-white" />
+            <PinInputField className="h-10 w-10 rounded-lg border border-gray-300 p-3 placeholder-white" />
+            <PinInputField className="h-10 w-10 rounded-lg border border-gray-300 p-3 placeholder-white" />
+            <PinInputField className="h-10 w-10 rounded-lg border border-gray-300 p-3 placeholder-white" />
+            <PinInputField className="h-10 w-10 rounded-lg border border-gray-300 p-3 placeholder-white" />
+            <PinInputField className="h-10 w-10 rounded-lg border border-gray-300 p-3 placeholder-white" />
+            <PinInputField className="h-10 w-10 rounded-lg border border-gray-300 p-3 placeholder-white" />
           </PinInput>
         </div>
       </form>
@@ -60,7 +60,7 @@ export default function ConfirmAccountView() {
       <nav className="mt-10 flex flex-col space-y-4">
         <Link
           to="/auth/request-code"
-          className="text-center text-gray-300 font-normal"
+          className="text-center font-normal text-gray-300"
         >
           Solicitar un nuevo Código
         </Link>

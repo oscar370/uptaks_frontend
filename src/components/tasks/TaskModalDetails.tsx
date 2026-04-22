@@ -91,7 +91,7 @@ export default function TaskModalDetails() {
                   leaveFrom="opacity-100 scale-100"
                   leaveTo="opacity-0 scale-95"
                 >
-                  <Dialog.Panel className="w-full max-w-4xl transform overflow-hidden rounded-2xl bg-white text-left align-middle shadow-xl transition-all p-16">
+                  <Dialog.Panel className="w-full max-w-4xl transform overflow-hidden rounded-2xl bg-white p-16 text-left align-middle shadow-xl transition-all">
                     <p className="text-sm text-slate-400">
                       Agregada el: {formatDate(data.createdAt)}{" "}
                     </p>
@@ -100,17 +100,17 @@ export default function TaskModalDetails() {
                     </p>
                     <Dialog.Title
                       as="h3"
-                      className="font-black text-4xl text-slate-600 my-5"
+                      className="my-5 text-4xl font-black text-slate-600"
                     >
                       {data.name}
                     </Dialog.Title>
-                    <p className="text-lg text-slate-500 mb-2">
+                    <p className="mb-2 text-lg text-slate-500">
                       Descripción: {data.description}
                     </p>
 
                     {data.completedBy.length ? (
                       <>
-                        <p className="font-bold text-2xl text-slate-600 my-5">
+                        <p className="my-5 text-2xl font-bold text-slate-600">
                           Historial de Cambios
                         </p>
 
@@ -132,7 +132,7 @@ export default function TaskModalDetails() {
                       <label className="font-bold">Estado Actual:</label>
 
                       <select
-                        className="w-full p-3 bg-white border border-gray-300"
+                        className="w-full border border-gray-300 bg-white p-3"
                         defaultValue={data.status}
                         onChange={handleChange}
                       >
@@ -141,7 +141,7 @@ export default function TaskModalDetails() {
                             <option key={key} value={key}>
                               {value}
                             </option>
-                          )
+                          ),
                         )}
                       </select>
                     </div>

@@ -83,8 +83,8 @@ export default function DeleteProjectModal() {
               leaveFrom="opacity-100 scale-100"
               leaveTo="opacity-0 scale-95"
             >
-              <Dialog.Panel className="w-full max-w-4xl transform overflow-hidden rounded-2xl bg-white text-left align-middle shadow-xl transition-all p-16">
-                <Dialog.Title as="h3" className="font-black text-4xl  my-5">
+              <Dialog.Panel className="w-full max-w-4xl transform overflow-hidden rounded-2xl bg-white p-16 text-left align-middle shadow-xl transition-all">
+                <Dialog.Title as="h3" className="my-5 text-4xl font-black">
                   Eliminar Proyecto{" "}
                 </Dialog.Title>
 
@@ -101,14 +101,14 @@ export default function DeleteProjectModal() {
                   noValidate
                 >
                   <div className="flex flex-col gap-3">
-                    <label className="font-normal text-2xl" htmlFor="password">
+                    <label className="text-2xl font-normal" htmlFor="password">
                       Password
                     </label>
                     <input
                       id="password"
                       type="password"
                       placeholder="Password Inicio de Sesión"
-                      className="w-full p-3  border-gray-300 border"
+                      className="w-full border border-gray-300 p-3"
                       {...register("password", {
                         required: "El password es obligatorio",
                       })}
@@ -120,7 +120,7 @@ export default function DeleteProjectModal() {
 
                   <input
                     type="submit"
-                    className=" bg-fuchsia-600 hover:bg-fuchsia-700 w-full p-3  text-white font-black  text-xl cursor-pointer"
+                    className="w-full cursor-pointer bg-fuchsia-600 p-3 text-xl font-black text-white hover:bg-fuchsia-700"
                     value="Eliminar Proyecto"
                   />
                 </form>

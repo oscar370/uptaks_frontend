@@ -39,32 +39,32 @@ export default function ProjectTeamView() {
       <>
         <h1 className="text-5xl font-black"> Colaboradores </h1>
 
-        <p className="text-2xl font-light text-gray-500 mt-5">
+        <p className="mt-5 text-2xl font-light text-gray-500">
           Administra el equipo de trabajo para este proyecto
         </p>
 
         <nav className="my-5 flex gap-3">
           <button
             type="button"
-            className="bg-purple-400 hover:bg-purple-500 px-10 py-3 text-white text-xl font-bold cursor-pointer transition-colors"
+            className="cursor-pointer bg-purple-400 px-10 py-3 text-xl font-bold text-white transition-colors hover:bg-purple-500"
             onClick={() => navigate("?addMember=true")}
           >
             Agregar Colaborador
           </button>
 
           <Link
-            className="bg-fuchsia-600 hover:bg-fuchsia-700 px-10 py-3 text-white text-xl font-bold cursor-pointer transition-colors"
+            className="cursor-pointer bg-fuchsia-600 px-10 py-3 text-xl font-bold text-white transition-colors hover:bg-fuchsia-700"
             to={`/projects/${projectId}`}
           >
             Volver a Proyecto
           </Link>
         </nav>
 
-        <h2 className="text-5xl font-black my-10">Miembros actuales</h2>
+        <h2 className="my-10 text-5xl font-black">Miembros actuales</h2>
         {data.length ? (
           <ul
             role="list"
-            className="divide-y divide-gray-100 border border-gray-100 mt-10 bg-white shadow-lg"
+            className="mt-10 divide-y divide-gray-100 border border-gray-100 bg-white shadow-lg"
           >
             {data?.map((member) => (
               <li
@@ -117,7 +117,7 @@ export default function ProjectTeamView() {
             ))}
           </ul>
         ) : (
-          <p className="text-center py-20">No hay miembros en este equipo</p>
+          <p className="py-20 text-center">No hay miembros en este equipo</p>
         )}
         <AddMemberModal />
       </>

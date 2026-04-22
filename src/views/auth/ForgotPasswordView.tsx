@@ -34,9 +34,9 @@ export default function ForgotPasswordView() {
   return (
     <>
       <h1 className="text-5xl font-black text-white">Restablecer Password</h1>
-      <p className="text-2xl font-light text-white mt-5">
+      <p className="mt-5 text-2xl font-light text-white">
         ¿Olvidaste tu password? Coloca tu e-mail{""}
-        <span className=" text-fuchsia-500 font-bold">
+        <span className="font-bold text-fuchsia-500">
           {" "}
           y restablece tu password
         </span>
@@ -44,18 +44,18 @@ export default function ForgotPasswordView() {
 
       <form
         onSubmit={handleSubmit(handleForgotPassword)}
-        className="space-y-8 p-10 mt-10 bg-white"
+        className="mt-10 space-y-8 bg-white p-10"
         noValidate
       >
         <div className="flex flex-col gap-5">
-          <label className="font-normal text-2xl" htmlFor="email">
+          <label className="text-2xl font-normal" htmlFor="email">
             Email
           </label>
           <input
             id="email"
             type="email"
             placeholder="Email de Registro"
-            className="w-full p-3  border-gray-300 border"
+            className="w-full border border-gray-300 p-3"
             {...register("email", {
               required: "El Email de registro es obligatorio",
               pattern: {
@@ -70,21 +70,21 @@ export default function ForgotPasswordView() {
         <input
           type="submit"
           value="Enviar Instrucciones"
-          className="bg-fuchsia-600 hover:bg-fuchsia-700 w-full p-3  text-white font-black  text-xl cursor-pointer"
+          className="w-full cursor-pointer bg-fuchsia-600 p-3 text-xl font-black text-white hover:bg-fuchsia-700"
         />
       </form>
 
       <nav className="mt-10 flex flex-col space-y-4">
         <Link
           to="/auth/login"
-          className="text-center text-gray-300 font-normal"
+          className="text-center font-normal text-gray-300"
         >
           ¿Ya tienes cuenta? Iniciar Sesión
         </Link>
 
         <Link
           to="/auth/register"
-          className="text-center text-gray-300 font-normal"
+          className="text-center font-normal text-gray-300"
         >
           ¿No tienes cuenta? Crea una
         </Link>

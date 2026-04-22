@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 export default function NotFound() {
   return (
     <>
-      <h1 className="font-black text-center text-4xl text-white">
+      <h1 className="text-center text-4xl font-black text-white">
         Página no encontrada
       </h1>
 

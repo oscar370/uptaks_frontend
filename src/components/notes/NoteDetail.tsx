@@ -16,7 +16,7 @@ export default function NoteDetail({ note }: NoteDetailProps) {
 
   const canDelete = useMemo(
     () => data?._id === note.createdBy._id,
-    [data, note.createdBy._id]
+    [data, note.createdBy._id],
   );
   const params = useParams();
   const projectId = params.projectId!;
@@ -40,7 +40,7 @@ export default function NoteDetail({ note }: NoteDetailProps) {
   if (isLoading) return "Cargando...";
 
   return (
-    <div className="p-3 flex justify-between items-center">
+    <div className="flex items-center justify-between p-3">
       <div>
         <p>
           {note.content} por:{" "}
@@ -52,7 +52,7 @@ export default function NoteDetail({ note }: NoteDetailProps) {
       {canDelete && (
         <button
           type="button"
-          className="bg-red-400 hover:bg-red-500 p-2 text-xs text-white cursor-pointer transition-colors"
+          className="cursor-pointer bg-red-400 p-2 text-xs text-white transition-colors hover:bg-red-500"
           onClick={() => mutate({ projectId, taskId, noteId: note._id })}
         >
           Eliminar

@@ -46,22 +46,22 @@ export default function TaskCard({ task, canEdit }: TaskCardProps) {
     : undefined;
 
   return (
-    <li className="p-5 bg-white border border-slate-300 flex justify-between gap-3">
+    <li className="flex justify-between gap-3 border border-slate-300 bg-white p-5">
       <div
-        className="min-w-0 flex flex-col gap-y-4"
+        className="flex min-w-0 flex-col gap-y-4"
         {...listeners}
         {...attributes}
         ref={setNodeRef}
         style={style}
       >
-        <p className="text-xl font-bold text-slate-600 text-left">
+        <p className="text-left text-xl font-bold text-slate-600">
           {task.name}
         </p>
         <p className="text-slate-500">{task.description}</p>
       </div>
 
       <div>
-        <div className="flex shrink-0  gap-x-6">
+        <div className="flex shrink-0 gap-x-6">
           <Menu as="div" className="relative flex-none">
             <Menu.Button className="-m-2.5 block p-2.5 text-gray-500 hover:text-gray-900">
               <span className="sr-only">opciones</span>

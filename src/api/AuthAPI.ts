@@ -36,7 +36,7 @@ export async function confirmAccount(formData: ConfirmToken) {
 }
 
 export async function requestConfirmationCode(
-  formData: RequestConfirmationCodeForm
+  formData: RequestConfirmationCodeForm,
 ) {
   try {
     const url = "/auth/request-code";

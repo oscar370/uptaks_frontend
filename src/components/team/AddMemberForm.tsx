@@ -42,14 +42,14 @@ export default function AddMemberForm() {
         noValidate
       >
         <div className="flex flex-col gap-3">
-          <label className="font-normal text-2xl" htmlFor="name">
+          <label className="text-2xl font-normal" htmlFor="name">
             E-mail de Usuario
           </label>
           <input
             id="name"
             type="text"
             placeholder="E-mail del usuario a Agregar"
-            className="w-full p-3  border-gray-300 border"
+            className="w-full border border-gray-300 p-3"
             {...register("email", {
               required: "El Email es obligatorio",
               pattern: {
@@ -63,7 +63,7 @@ export default function AddMemberForm() {
 
         <input
           type="submit"
-          className=" bg-fuchsia-600 hover:bg-fuchsia-700 w-full p-3  text-white font-black  text-xl cursor-pointer"
+          className="w-full cursor-pointer bg-fuchsia-600 p-3 text-xl font-black text-white hover:bg-fuchsia-700"
           value="Buscar Usuario"
         />
       </form>

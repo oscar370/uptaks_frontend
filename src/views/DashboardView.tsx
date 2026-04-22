@@ -25,13 +25,13 @@ export default function DashboardView() {
       <>
         <h1 className="text-5xl font-bold">Mis Proyectos</h1>
 
-        <p className="text-2xl font-light text-gray-500 mt-5">
+        <p className="mt-5 text-2xl font-light text-gray-500">
           Maneja y administra tus proyectos
         </p>
 
         <nav className="my-5">
           <Link
-            className="bg-purple-400 hover:bg-purple-500 px-10 py-3 text-white text-xl font-bold cursor-pointer transition-colors"
+            className="cursor-pointer bg-purple-400 px-10 py-3 text-xl font-bold text-white transition-colors hover:bg-purple-500"
             to="/projects/create"
           >
             Nuevo Proyecto
@@ -41,7 +41,7 @@ export default function DashboardView() {
         {data.length ? (
           <ul
             role="list"
-            className="divide-y divide-gray-100 border border-gray-100 mt-10 bg-white shadow-lg"
+            className="mt-10 divide-y divide-gray-100 border border-gray-100 bg-white shadow-lg"
           >
             {data.map((project) => (
               <li
@@ -52,18 +52,18 @@ export default function DashboardView() {
                   <div className="min-w-0 flex-auto space-y-2">
                     <div className="mb-2">
                       {project.manager === user._id ? (
-                        <p className="font-bold text-xs uppercase bg-indigo-50 text-indigo-500 border-2 border-indigo-500 rounded-lg inline-block py-1 px-5">
+                        <p className="inline-block rounded-lg border-2 border-indigo-500 bg-indigo-50 px-5 py-1 text-xs font-bold text-indigo-500 uppercase">
                           Manager
                         </p>
                       ) : (
-                        <p className="font-bold text-xs uppercase bg-green-50 text-green-500 border-2 border-green-500 rounded-lg inline-block py-1 px-5">
+                        <p className="inline-block rounded-lg border-2 border-green-500 bg-green-50 px-5 py-1 text-xs font-bold text-green-500 uppercase">
                           Colaborador
                         </p>
                       )}
                     </div>
                     <Link
                       to={`/projects/${project._id}`}
-                      className="text-gray-600 cursor-pointer hover:underline text-3xl font-bold"
+                      className="cursor-pointer text-3xl font-bold text-gray-600 hover:underline"
                     >
                       {project.projectName}
                     </Link>
@@ -121,7 +121,7 @@ export default function DashboardView() {
                                 onClick={() =>
                                   navigate(
                                     location.pathname +
-                                      `?deleteProject=${project._id}`
+                                      `?deleteProject=${project._id}`,
                                   )
                                 }
                               >
@@ -138,11 +138,11 @@ export default function DashboardView() {
             ))}
           </ul>
         ) : (
-          <p className="text-center py-20">
+          <p className="py-20 text-center">
             No hay proyectos aún
             <Link
               to="/projects/create"
-              className="text-fuchsia-500 ml-2 font-bold"
+              className="ml-2 font-bold text-fuchsia-500"
             >
               Crear proyecto
             </Link>
