@@ -8,8 +8,8 @@ import { toast } from "react-toastify";
 
 export default function LoginView() {
   const initialValues: UserLoginForm = {
-    email: "",
-    password: "",
+    email: "correo@correo.com",
+    password: "12345678",
   };
   const {
     register,

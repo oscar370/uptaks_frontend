@@ -2,7 +2,7 @@
   "name": "Debian",
   "image": "mcr.microsoft.com/devcontainers/base:trixie",
   "features": {
-    "ghcr.io/devcontainers/features/node:1": {}
+    "ghcr.io/devcontainers/features/node:2.0.0": {}
   },
   "remoteUser": "vscode",
   "customizations": {
@@ -18,5 +18,5 @@
     }
   },
   "mounts": ["source=pnpm-store,target=/pnpm-store,type=volume"],
-  "postCreateCommand": "sudo chown -R $(whoami) /pnpm-store && pnpm config set store-dir /pnpm-store"
+  "postCreateCommand": "sudo chown -R $(whoami) /pnpm-store && pnpm config set store-dir /pnpm-store && pnpm i"
 }
